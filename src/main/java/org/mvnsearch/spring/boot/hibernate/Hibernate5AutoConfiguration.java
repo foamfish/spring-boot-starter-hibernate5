@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
@@ -30,12 +31,14 @@ import javax.sql.DataSource;
 public class Hibernate5AutoConfiguration {
     @Autowired
     private Hibernate5Properties properties;
+    @Autowired
+    private ResourceLoader resourceLoader;
 
     @Bean
     public LocalSessionFactoryBean hibernate5SessionFactory(DataSource dataSource) {
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
-        factoryBean.setConfigLocation(new ClassPathResource(properties.getConfig()));
+        factoryBean.setConfigLocation(resourceLoader.getResource(properties.getConfig()));
         return factoryBean;
     }
 
