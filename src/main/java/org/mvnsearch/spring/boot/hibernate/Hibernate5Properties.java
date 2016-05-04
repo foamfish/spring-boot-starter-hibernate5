@@ -14,7 +14,7 @@ public class Hibernate5Properties {
     /**
      * hibernate config
      */
-    private String config = "/hibernate.cfg.xml";
+    private String config = "classpath:hibernate.cfg.xml";
 
     public String getConfig() {
         return config;
