@@ -45,4 +45,5 @@ Spring Boot Starter Hibernate5
 
 ### 参考文档
 
+* Hibernate Entity Manager specific properties: http://docs.jboss.org/hibernate/stable/entitymanager/reference/en/html_single/#setup-configuration-bootstrapping
 * Hibernate: http://hibernate.org/
