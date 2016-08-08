@@ -14,9 +14,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <spring.version>4.3.1.RELEASE</spring.version>
-        <spring-boot.version>1.4.0.RC1</spring-boot.version>
-        <hibernate.version>5.2.1.Final</hibernate.version>
+        <spring.version>4.3.2.RELEASE</spring.version>
+        <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
+        <hibernate.version>5.2.2.Final</hibernate.version>
     </properties>
 
     <developers>
